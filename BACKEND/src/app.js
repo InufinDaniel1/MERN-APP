@@ -14,9 +14,10 @@ const app = express();
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(`Req method is ${req.method} and req URL is ${req.url}`);
+  next();
 });
 app.use("/api/notes", router);
 
 app.listen(PORT, () => {
-  console.log("server is running");
+  console.log("server is running at port " + PORT);
 });
