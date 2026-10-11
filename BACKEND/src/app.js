@@ -19,5 +19,5 @@ app.use((req, res, next) => {
 app.use("/api/notes", router);
 
 app.listen(PORT, () => {
-  console.log("server is running at port " + PORT);
+  console.log(`server is running at port http://localhost:${PORT}`);
 });
